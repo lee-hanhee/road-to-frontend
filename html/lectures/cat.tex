@@ -2,45 +2,116 @@
     \begin{center}
         \begin{tabular}{ll}
             \textbf{Concept} & \textbf{Syntax} \\ 
-            Opening and closing tags & \texttt{<tag>...</tag>} \\
+            Open/close tag elements & \texttt{<tag>...</tag>} \\
             \multicolumn{2}{p{\linewidth}}{\begin{itemize}
                 \item Text an element will display goes b/w its opening/closing tags. 
-                \item e.g. h\# p, a, div, span, etc.
+                \item e.g. elements with o/c tags h\# p, a, div, span, ul etc.
                 \begin{itemize}
-                    \item h\#: 1-6 to signify the importance of content below them in decreasing order.
-                    \item a: Anchor tag to create hyperlinks (use href attribute).
+                    \item Text
+                    \begin{itemize}
+                        \item h\#: 1-6 to signify the importance of content below them in decreasing order.
+                        \item em: Emphasize text (italicize).
+                        \item strong: Strongly emphasize text (bold).
+                    \end{itemize}
+                    \item List:
+                    \begin{itemize}
+                        \item ul: Unordered list to create a list of items w/o a specific order.
+                        \item ol: Ordered list to create a list of items with a specific order.
+                        \item li: List item to create an item in a list (ordered or unordered).
+                    \end{itemize}
+                    \item Form:
+                    \begin{itemize}
+                        \item form: Create a form to collect user input.
+                        \item button: Create a clickable button (default behavior of a button is to submit a form to the location in the form's action attribute).
+                        \item label: used to help associate the text for an input element with the input element itself (helpful for assistive technologies).
+                        \item fieldset: Group related inputs and labels together in a form. (block-level element $\rightarrow$ appear on new line)
+                        \item legend: Caption for the content in the fieldset element.
+                    \end{itemize}
+                    \item figcaption: Caption to describe the image contained within the figure element. 
+                    \item a: Anchor tag to create hyperlinks (use href attribute) for text, images, etc.
                 \end{itemize}
             \end{itemize}} \\
-            Self-closing tags & \texttt{<tag />} \\
+            Self-close tag elements & \texttt{<tag />} \\
             Void elements & \texttt{<tag>} \\
             \multicolumn{2}{p{\linewidth}}{\begin{itemize}
                 \item An element w/o a closing tag.
                 \item e.g. img, br, hr, input, link, meta
-            \end{itemize}} \\
-            Attributes & \texttt{<tag attribute="value">} \\
-            \multicolumn{2}{p{\linewidth}}{\begin{itemize}
-                \item Special words inside the opening tag of an element to control the element's behavior.
-                \item e.g. id, class, src, alt, href, style, etc.
                 \begin{itemize}
-                    \item src: Specifies the URL of an image.
-                    \item alt: Specifies an alternate text for an image to improve accessibility and is displayed if the image cannot be loaded.
-                    \item href: Specifies the URL of the page the link goes to.
+                    \item img: Embed an image in a document.
+                    \item input: Collect data from a web form. 
                 \end{itemize}
             \end{itemize}} \\
-            Commnenting & \texttt{<!- - comment - ->} \\
+            Commenting & \texttt{<!- - comment - ->} \\
             \multicolumn{2}{p{\linewidth}}{\begin{itemize}
                 \item Comments to leave messages w/o affecting browser display 
                 \item Can make code inactive.
             \end{itemize}} \\
-            Content areas & \texttt{<header>, <footer>, <nav>, <main>, <article>, <section>, <aside>} \\
+            Content area elements & \texttt{<header>, <footer>, <nav>, <main>, <article>, <section>, <aside>} \\
+            & \texttt{</header>, </footer>, </nav>, </main>, </article>, </section>, </aside>} \\
             \multicolumn{2}{p{\linewidth}}{\begin{itemize}
                 \item Identify different content areas for modularity, Search Engine Optimization (SEO), and accessibility. 
-                \item main: Represent main content of the body of a document. 
-                \begin{itemize}
-                    \item Content inside should be unique and not repeated elsewhere on the page.
-                \end{itemize}
                 \item Nesting: For readability, nest content by indenting.
+                \item Examples:
+                \begin{itemize}
+                    \item main: Represent main content of the body of a document. 
+                    \item section: Define sections in a document, such as chapters, headers, footers, or any other sections of the document.
+                    \begin{itemize}
+                        \item Content inside should be unique and not repeated elsewhere on the page.
+                    \end{itemize}
+                    \item figure: Represents self-contained content and will allow you to associate a caption with an image.
+                \end{itemize}
             \end{itemize}} \\
         \end{tabular}
     \end{center}
 \end{summary}
+\newpage
+
+\begin{summary}
+    \begin{center}
+        \begin{tabular}{ll}
+            \textbf{Concept} & \textbf{Syntax} \\ 
+            Attributes & \texttt{<tag attribute="value">} \\
+            \multicolumn{2}{p{\linewidth}}{\begin{itemize}
+                \item Special words inside the opening tag of an element to control the element's behavior.
+                \item e.g. id, class, src, alt, href, style, target etc.
+                \begin{itemize}
+                    \item Image:
+                    \begin{itemize}
+                        \item src: Specifies the URL of an image.
+                        \item alt: Specifies an alternate text for an image to improve accessibility and is displayed if the image cannot be loaded.
+                    \end{itemize}
+                    \item a: 
+                    \begin{itemize}
+                        \item href: Specifies the URL of the page the link goes to.
+                        \item target: Specifies where to open the linked document (e.g. "\_blank" opens in a new tab).
+                    \end{itemize}
+                    \item Form:
+                    \begin{itemize}
+                        \item action: Where form data should be sent. 
+                    \end{itemize}
+                    \item Input: 
+                    \begin{itemize}
+                        \item type: Specifies the type of form element (e.g. text, password, submit, radio (circle), checkbox (square)).
+                        \item name: For a form's data to be accessed by the location specified by action, you must give the text input a name attribute and assign it a value to represent the data being submitted.
+                        \item value: Specify the data sent to the server when the form is submitted.
+                        \begin{itemize}
+                            \item  Radio: W/o value attribute, the default is "On" regardless of which button is clicked (use value to differentiate).
+                        \end{itemize}
+                        \item placeholder: Provides a hint to the user of what can be entered in the field.
+                        \item required: Prevent a user from submitting a form without filling out a required field (no value needed).
+                    \end{itemize}
+                    \item Button:
+                    \begin{itemize}
+                        \item type: Specifies the type of button (e.g. submit, reset, button, checkbox).
+                    \end{itemize}
+                    \item General
+                    \begin{itemize}
+                        \item id: Used to identify specific HTML elements. This must be unique from all other id values for the entire page. 
+                    \end{itemize}
+                \end{itemize}
+            \end{itemize}} \\
+        \end{tabular}
+    \end{center}
+\end{summary}
+
+
