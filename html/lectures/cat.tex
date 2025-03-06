@@ -39,6 +39,7 @@
                 \begin{itemize}
                     \item img: Embed an image in a document.
                     \item input: Collect data from a web form. 
+                    \item meta: Provide metadata about the HTML document.
                 \end{itemize}
             \end{itemize}} \\
             Commenting & \texttt{<!- - comment - ->} \\
@@ -53,12 +54,26 @@
                 \item Nesting: For readability, nest content by indenting.
                 \item Examples:
                 \begin{itemize}
-                    \item main: Represent main content of the body of a document. 
-                    \item section: Define sections in a document, such as chapters, headers, footers, or any other sections of the document.
+                    \item body: All page content elements that should be rendered to the page go inside the body element.
                     \begin{itemize}
-                        \item Content inside should be unique and not repeated elsewhere on the page.
+                        \item main: Represent main content of the body of a document. 
+                        \item section: Define sections in a document, such as chapters, headers, footers, or any other sections of the document.
+                        \begin{itemize}
+                            \item Content inside should be unique and not repeated elsewhere on the page.
+                        \end{itemize}
+                        \item figure: Represents self-contained content and will allow you to associate a caption with an image.
+                        \item footer: Represent a footer for a document or section, which contains info about the author of the document, copyright data, links to term of service, contact info, etc. 
                     \end{itemize}
-                    \item figure: Represents self-contained content and will allow you to associate a caption with an image.
+                    \item header: contain metadata about the document, such as its title, links to stylesheets, and scripts. Metadata is information about the page that isn't displayed directly on the page.
+                    \begin{itemize}
+                        \item nav: Contains navigation links that appear on every page of a website.
+                        \item title: Title of the document, which appears in the browser tab.
+                    \end{itemize}
+                    \item html: Root element of an HTML document and wraps all content on the page. 
+                    \begin{itemize}
+                        \item lang: Specifies the primary language of the document.
+                    \end{itemize}
+                    \item \texttt{<!DOCTYPE html>}: Tells browsers that the document is an HTML5 document which is the latest version of HTML.
                 \end{itemize}
             \end{itemize}} \\
         \end{tabular}
@@ -99,6 +114,7 @@
                         \end{itemize}
                         \item placeholder: Provides a hint to the user of what can be entered in the field.
                         \item required: Prevent a user from submitting a form without filling out a required field (no value needed).
+                        \item checked: Pre-select a radio button or checkbox.
                     \end{itemize}
                     \item Button:
                     \begin{itemize}
@@ -108,10 +124,25 @@
                     \begin{itemize}
                         \item id: Used to identify specific HTML elements. This must be unique from all other id values for the entire page. 
                     \end{itemize}
+                    \item label
+                    \begin{itemize}
+                        \item for: Used to associate the label with a form control (input, textarea, select, etc.).
+                        \begin{itemize}
+                            \item id of the input matches the for attribute of the label.
+                        \end{itemize}
+                    \end{itemize}
+                    \item meta
+                    \begin{itemize}
+                        \item charset: Specifies the character encoding for the HTML document (e.g. UTF-8).
+                    \end{itemize}
                 \end{itemize}
             \end{itemize}} \\
         \end{tabular}
     \end{center}
 \end{summary}
+
+\begin{warning}
+Best practice  is to include the value attribute to match the id with any checkboxes or radio buttons.
+\end{warning}
 
 
